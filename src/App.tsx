@@ -1,12 +1,16 @@
-import React from "react";
-import "./App.css";
+import './App.css'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import { Example } from './libraries/tanstack-query'
 
-function App() {
+const queryClient = new QueryClient()
+
+export default function App() {
   return (
-    <React.Fragment>
-      <h1>Pokedex de Domingo</h1>
-    </React.Fragment>
-  );
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  )
 }
-
-export default App;
