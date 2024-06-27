@@ -1,16 +1,11 @@
-import './App.css'
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
-import { Example } from './libraries/tanstack-query'
-
-const queryClient = new QueryClient()
+import React from "react";
+import "./App.css";
+import { HookForm } from "./libraries/hook-form/example";
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Example />
-    </QueryClientProvider>
-  )
+    <React.Fragment>
+      <HookForm />
+    </React.Fragment>
+  );
 }
